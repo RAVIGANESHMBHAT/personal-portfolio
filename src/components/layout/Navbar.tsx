@@ -50,8 +50,9 @@ export function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
-    const el = document.getElementById(href.slice(1));
-    el?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      document.getElementById(href.slice(1))?.scrollIntoView({ behavior: "smooth" });
+    }, 350);
   };
 
   return (
